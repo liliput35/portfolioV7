@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242933;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
+
+.menu {
+  width: 30px;
+  float: right;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.mobilenav {
+  height: 100vh;
+  text-align: center;
+  background: #242933;
+  padding-top: 3em;
+  display: none;
+  animation: transitionIn 1s;
+}
+
+.mobilenav ul {
+  list-style: none;
+}
+
+.mobilenav ul li {
+  margin-top: 2em;
+}
+
+.mobilenav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 3px 7px;
+}
+
+.mobilenav ul li a:hover {
+  background-color: #2f3542;
+  border-radius: 10px;
+}
+
+header {
+  position: absolute;
+  top: 18%;
+  text-align: center;
+}
+
+nav {
+  display: none;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2.4em;
+}
+
+header #description {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #b4b4b4;
+}
+
+header #description span {
+  color: white;
+  font-weight: 600;
+  border-bottom: solid 2px #ec4656;
+}
+
+header #doda {
+  margin-bottom: 0.4em;
+  font-weight: 400;
+  color: #b4b4b4;
+}
+
+header #doda a {
+  text-decoration: none;
+  color: white;
+}
+
+h3 {
+  color: #b4b4b4;
+}
+
+h3 a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+
+}
+
+h3 a:hover {
+  color:  #ec4656;
+}
+
+.menu-btn {
+  display: block;
+}
+
+.aboutm {
+  margin-top: 100vh;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+    max-width: 1080px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  header {
+    position: absolute;
+    top: 25%;
+    text-align: left;
+  }
+
+  nav {
+    display: block;
+    width: 300px;
+    margin-top: 0.5em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #ec4656;
+    bottom: -10px;
+    transition: width .5s;
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+
+
+}
